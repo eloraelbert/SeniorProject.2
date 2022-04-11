@@ -1,0 +1,36 @@
+.container {
+  width: 200px;
+  height: 500px;
+  border: solid 1px #ddd;
+  float: left;
+  
+}
+#div1 {
+  border-radius: 25px;
+  width: 200px;
+  height: 500px;
+  border: solid 2px #32377A;
+  float: left;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  background-color: #F1F1F8
+  
+}
+#inputboard {
+  font-family: "Verdana", Tahoma, sans-serif;
+}
+input {
+  border-radius: 25px;
+  padding: 10px 10px;
+  border: none;
+  background-color: #CFCBF6;
+}
+input:focus {
+  border: 3px solid#32377A;
+  text-decoration-line: underline; 
+}
+body {
+
+}
