@@ -3,7 +3,6 @@
   height: 500px;
   border: solid 1px #ddd;
   float: left;
-  
 }
 #div1 {
   border-radius: 25px;
@@ -20,6 +19,8 @@
 }
 #inputboard {
   font-family: "Verdana", Tahoma, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
 }
 input {
   border-radius: 25px;
@@ -31,6 +32,15 @@ input:focus {
   border: 3px solid#32377A;
   text-decoration-line: underline; 
 }
-body {
-
+h2 {
+  font-family: "Verdana", Tahoma, sans-serif;
+  color: #5861C6;
+}
+p {
+  font-family: "Verdana", Tahoma, sans-serif;
+}
+button {
+  border-radius: 25px;
+  margin: auto;
+  width: 100px;
 }
