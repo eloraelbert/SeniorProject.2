@@ -14,7 +14,7 @@
   padding-right: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
-  background-color: #F1F1F8
+  background-color: #F1F1F8;
   
 }
 #inputboard {
@@ -23,6 +23,7 @@
   margin-right: auto;
 }
 input {
+  width: 75%;
   border-radius: 25px;
   padding: 10px 10px;
   border: none;
@@ -44,3 +45,5 @@ button {
   margin: auto;
   width: 100px;
 }
+
+
