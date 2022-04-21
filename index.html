@@ -9,9 +9,10 @@
     <h2>Notsey</h2>
     <p>Click text boxes to add your own text. Drag boxes into the space below and organize them however you like.</p>
     <div id="inputBoard">
-      <input draggable = "true" id = "drag1" ondragstart="drag(event)" type="text" id="fname" name="fname" value="Create Element" ondblclick="deleteBox()" class = "draggable"><b><br>
+      <b><br>
         <button onclick="createNewElement()">New Box</button>
         <button id = "bluebtn">Blue!</button>
+        <input draggable = "true" id = "drag1" ondragstart="drag(event)" type="text" id="fname" name="fname" placeholder="Create Element" ondblclick="deleteBox()" class = "draggable">
     </div>
     <div class = "flex-container">
       <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
