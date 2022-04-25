@@ -1,7 +1,8 @@
 
+var divcount = document.querySelectorAll('.draggable').length;
 
 function createNewElement() {
-  var divcount = document.querySelectorAll('.draggable').length;
+  divcount = document.querySelectorAll('.draggable').length;
   // First create a DIV element.
 	var txtNewInputBox = document.createElement('input');
   txtNewInputBox.setAttribute('type', 'text');
@@ -44,6 +45,36 @@ function deleteBox() {
   }
 }
 
+window.onload=function(){
+  const btn = document.getElementById('bluebtn');
+  const txtbox = document.activeElement;
+  btn.addEventListener('click', function onClick() {
+    btn.style.backgroundColor = 'blue';
+    btn.style.color = 'white';
+    if (txtbox.tagName == "INPUT");
+      txtbox.style.backgroundColor = 'blue';
+      txtbox.style.color = 'white';
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function changeColor() {
 //   document.getElementsByClassName(.draggable)[0].innerHtml = "<style= background-color:Tomato;>"
 // }
@@ -52,22 +83,24 @@ function deleteBox() {
     //const btn = document.getElementById('#bluebtn');
   
     //btn.addEventListener('click', function onClick(event) {
-      const box = document.getElementById('#inputBoard');
+      //const box = document.getElementById('#inputBoard');
   
       //document.getElementById('#inputBoard').innerHTML = "<style=backgroundColor:'DodgerBlue'>"
     //});
   //}
 //}
 
-window.onload=function(){
-  const btn = document.getElementById('bluebtn');
-  //const txtbox = document.querySelector('.draggable');
-  btn.addEventListener('click', function onClick() {
-    btn.style.backgroundColor = 'blue';
-    btn.style.color = 'white';
-    //txtbox.style.backgroundColor = 'blue';
-    //txtbox.style.color = 'white';
-  });
-}
+
+
+// window.onload=function(){
+//   const btn = document.getElementById('bluebtn');
+//   const txtbox = document.querySelectorAll('.draggable');
+//   btn.addEventListener('click', function onClick() {
+//     btn.style.backgroundColor = 'blue';
+//     btn.style.color = 'white';
+//     txtbox.style.backgroundColor = 'blue';
+//     txtbox.style.color = 'white';
+//   });
+
 
 
