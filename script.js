@@ -1,18 +1,20 @@
 
-var divcount = document.querySelectorAll('.draggable').length;
-
 function createNewElement() {
-  divcount = document.querySelectorAll('.draggable').length;
+  var divcount = document.getElementsByClassName('draggable').length;
   // First create a DIV element.
 	var txtNewInputBox = document.createElement('input');
   txtNewInputBox.setAttribute('type', 'text');
   txtNewInputBox.setAttribute('draggable', 'true');
+  txtNewInputBox.setAttribute('class', 'draggable');
   txtNewInputBox.setAttribute('id', 'drag'+ divcount);
   txtNewInputBox.setAttribute('ondragstart', 'drag(event)');
   txtNewInputBox.setAttribute('name', 'fname');
   txtNewInputBox.setAttribute('placeholder', 'Create Element');
   txtNewInputBox.setAttribute('ondblclick', 'deleteBox()');
-  
+  txtNewInputBox.addEventListener('click', event => {
+    //handle click
+    event.target.style.backgroundColor = 'salmon';
+  })
   //txtNewInputBox.classList.add("draggable");
   //set divCount to # of draggable divs
 
@@ -23,6 +25,11 @@ function createNewElement() {
   // Finally put it where it is supposed to appear.
 	document.getElementById("inputBoard").appendChild(txtNewInputBox);
 }
+
+function bluebtntf() {
+  bluebtnOn = true;
+}
+
 
 //to do 
 //when creating new textbox, change id of input to be drag(num of )
@@ -38,29 +45,24 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("input");
   ev.target.appendChild(document.getElementById(data));
 }
-function deleteBox() {
-  const element = document.querySelector('.draggable');
-  if (!!document.querySelector('.draggable')){
-    element.remove();
-  }
-}
-
-window.onload=function(){
-  const btn = document.getElementById('bluebtn');
-  btn.addEventListener('click', function onClick() {
-    const txtboxid = document.activeElement.id;
-    btn.style.backgroundColor = 'blue';
-    btn.style.color = 'white';
-    document.getElementById(txtboxid).style.backgroundColor ='blue';
-  });
-}
-
-
-
-
-// function changeColor() {
-//   document.getElementsByClassName(.draggable)[0].innerHtml = "<style= background-color:Tomato;>"
+// function deleteBox() {
+//   const element = document.querySelector('.draggable');
+//   if (!!document.querySelector('.draggable')){
+//     element.remove();
+//   }
 // }
+
+// window.onload=function(){
+//   const btn = document.getElementById('bluebtn');
+//   btn.addEventListener('click', function onClick() {
+//     const txtboxid = document.activeElement.id;
+//     btn.style.backgroundColor = 'blue';
+//     btn.style.color = 'white';
+//     document.getElementById(txtboxid).style.backgroundColor ='blue';
+//   });
+// }
+
+
 //function blue(){
   //window.onload=function(){
     //const btn = document.getElementById('#bluebtn');
@@ -72,9 +74,6 @@ window.onload=function(){
     //});
   //}
 //}
-
-
-
 // window.onload=function(){
 //   const btn = document.getElementById('bluebtn');
 //   const txtbox = document.querySelectorAll('.draggable');
@@ -84,6 +83,3 @@ window.onload=function(){
 //     txtbox.style.backgroundColor = 'blue';
 //     txtbox.style.color = 'white';
 //   });
-
-
-
