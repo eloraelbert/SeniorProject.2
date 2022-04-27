@@ -13,7 +13,9 @@ function createNewElement() {
   txtNewInputBox.setAttribute('ondblclick', 'deleteBox()');
   txtNewInputBox.addEventListener('click', event => {
     //handle click
-    event.target.style.backgroundColor = 'salmon';
+    if (bluebtnOn == true) {
+      event.target.style.backgroundColor = 'salmon';
+    }
   })
   //txtNewInputBox.classList.add("draggable");
   //set divCount to # of draggable divs
@@ -26,13 +28,15 @@ function createNewElement() {
 	document.getElementById("inputBoard").appendChild(txtNewInputBox);
 }
 
-function bluebtntf() {
-  bluebtnOn = true;
+window.onload=function(){
+  const btn = document.getElementById('bluebtn');
+  btn.addEventListener('click', function onClick() {
+    btn.style.backgroundColor = 'blue';
+    btn.style.color = 'white';
+    bluebtnOn = true;
+    return bluebtnOn;
+  });
 }
-
-
-//to do 
-//when creating new textbox, change id of input to be drag(num of )
 
 function allowDrop(ev) {
   ev.preventDefault();
@@ -52,34 +56,3 @@ function drop(ev) {
 //   }
 // }
 
-// window.onload=function(){
-//   const btn = document.getElementById('bluebtn');
-//   btn.addEventListener('click', function onClick() {
-//     const txtboxid = document.activeElement.id;
-//     btn.style.backgroundColor = 'blue';
-//     btn.style.color = 'white';
-//     document.getElementById(txtboxid).style.backgroundColor ='blue';
-//   });
-// }
-
-
-//function blue(){
-  //window.onload=function(){
-    //const btn = document.getElementById('#bluebtn');
-  
-    //btn.addEventListener('click', function onClick(event) {
-      //const box = document.getElementById('#inputBoard');
-  
-      //document.getElementById('#inputBoard').innerHTML = "<style=backgroundColor:'DodgerBlue'>"
-    //});
-  //}
-//}
-// window.onload=function(){
-//   const btn = document.getElementById('bluebtn');
-//   const txtbox = document.querySelectorAll('.draggable');
-//   btn.addEventListener('click', function onClick() {
-//     btn.style.backgroundColor = 'blue';
-//     btn.style.color = 'white';
-//     txtbox.style.backgroundColor = 'blue';
-//     txtbox.style.color = 'white';
-//   });
