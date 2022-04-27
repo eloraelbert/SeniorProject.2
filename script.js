@@ -47,30 +47,13 @@ function deleteBox() {
 
 window.onload=function(){
   const btn = document.getElementById('bluebtn');
-  const txtbox = document.activeElement;
   btn.addEventListener('click', function onClick() {
+    const txtboxid = document.activeElement.id;
     btn.style.backgroundColor = 'blue';
     btn.style.color = 'white';
-    if (txtbox.tagName == "INPUT");
-      txtbox.style.backgroundColor = 'blue';
-      txtbox.style.color = 'white';
+    document.getElementById(txtboxid).style.backgroundColor ='blue';
   });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
