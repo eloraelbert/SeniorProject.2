@@ -1,4 +1,6 @@
 
+
+
 function createNewElement() {
   var divcount = document.getElementsByClassName('draggable').length;
   // First create a DIV element.
@@ -11,10 +13,20 @@ function createNewElement() {
   txtNewInputBox.setAttribute('name', 'fname');
   txtNewInputBox.setAttribute('placeholder', 'Create Element');
   txtNewInputBox.setAttribute('ondblclick', 'deleteBox()');
+
+  var bluebtnOn = false;
+  var pinkbtnOn = false;
+  var purplebtnOn = false;  
   txtNewInputBox.addEventListener('click', event => {
     //handle click
-    if (bluebtnOn == true) {
+    if (bluebtnOn == true); {
+      event.target.style.backgroundColor = 'blue';
+    }
+    if (pinkbtnOn == true); {
       event.target.style.backgroundColor = 'salmon';
+    }
+    if (purplebtnOn == true); {
+      event.target.style.backgroundColor = 'purple';
     }
   })
   //txtNewInputBox.classList.add("draggable");
@@ -28,13 +40,40 @@ function createNewElement() {
 	document.getElementById("inputBoard").appendChild(txtNewInputBox);
 }
 
+
 window.onload=function(){
   const btn = document.getElementById('bluebtn');
   btn.addEventListener('click', function onClick() {
     btn.style.backgroundColor = 'blue';
     btn.style.color = 'white';
     bluebtnOn = true;
-    return bluebtnOn;
+    pinkbtnOn = false;
+    purplebtnOn = false;
+    return bluebtnOn, pinkbtnOn, purplebtnOn;
+  });
+}
+
+window.onload=function(){
+  const btn = document.getElementById('pinkbtn');
+  btn.addEventListener('click', function onClick() {
+    btn.style.backgroundColor = 'salmon';
+    btn.style.color = 'white';
+    bluebtnOn = false;
+    pinkbtnOn = true;
+    purplebtnOn = false;
+    return bluebtnOn, pinkbtnOn, purplebtnOn;
+  });
+}
+
+window.onload=function(){
+  const btn = document.getElementById('purplebtn');
+  btn.addEventListener('click', function onClick() {
+    btn.style.backgroundColor = 'purple';
+    btn.style.color = 'white';
+    bluebtnOn = false;
+    pinkbtnOn = false;
+    purplebtnOn = true;
+    return bluebtnOn, pinkbtnOn, purplebtnOn;
   });
 }
 
