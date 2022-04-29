@@ -14,7 +14,7 @@
   padding-right: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
-  background-color: #F1F1F8;
+  background-color: #ECE9EC;
   
 }
 #inputboard {
@@ -27,7 +27,7 @@ input {
   border-radius: 25px;
   padding: 10px 10px;
   border: none;
-  background-color: #CFCBF6;
+  background-color: #CBC4D4;
   display: block;
 }
 input:focus {
@@ -36,15 +36,19 @@ input:focus {
 }
 h2 {
   font-family: "Verdana", Tahoma, sans-serif;
-  color: #5861C6;
+  color: #668B8F;
+  text-align: center;
+  font-size: 5vw;
 }
 p {
   font-family: "Verdana", Tahoma, sans-serif;
+  text-align: center;
 }
 button {
   border-radius: 25px;
   margin: auto;
   width: 100px;
+  background-color: #F9F6F1;
 }
 
 

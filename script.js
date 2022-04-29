@@ -6,11 +6,11 @@
   const bbtn = document.getElementById('bluebtn');
   bbtn.addEventListener('click', function onClick() {
     if (bluebtnOn == false) {
-      bbtn.style.backgroundColor = 'blue';
+      bbtn.style.backgroundColor = '#83CBBF';
       bbtn.style.color = 'white';
       bluebtnOn = true;
     } else {
-       bbtn.style.backgroundColor = 'white';
+       bbtn.style.backgroundColor = '#F9F6F1';
        bbtn.style.color = 'black';
        bluebtnOn = false;
     }
@@ -19,11 +19,11 @@
   const pbtn = document.getElementById('pinkbtn');
   pbtn.addEventListener('click', function onClick() {
     if (pinkbtnOn == false) {
-      pbtn.style.backgroundColor = 'salmon';
+      pbtn.style.backgroundColor = '#DBA095';
       pbtn.style.color = 'white';
       pinkbtnOn = true;
     } else {
-       pbtn.style.backgroundColor = 'white';
+       pbtn.style.backgroundColor = '#F9F6F1';
        pbtn.style.color = 'black';
        pinkbtnOn = false;
     }
@@ -32,11 +32,11 @@
   const plbtn = document.getElementById('purplebtn');
   plbtn.addEventListener('click', function onClick() {
     if (purplebtnOn == false) {
-      plbtn.style.backgroundColor = 'purple';
+      plbtn.style.backgroundColor = '#AB90B6';
       plbtn.style.color = 'white';
       purplebtnOn = true;
     } else {
-       plbtn.style.backgroundColor = 'white';
+       plbtn.style.backgroundColor = '#F9F6F1';
        plbtn.style.color = 'black';
        purplebtnOn = false;
     }
@@ -60,11 +60,14 @@ function createNewElement() {
   txtNewInputBox.addEventListener('click', event => {
     //handle click
     if (bluebtnOn == true) {
-      event.target.style.backgroundColor = 'blue';
+      event.target.style.backgroundColor = '#83CBBF';
+      event.target.style.color = 'white';
     } if (pinkbtnOn == true) {
-      event.target.style.backgroundColor = 'salmon';
+      event.target.style.backgroundColor = '#DBA095';
+      event.target.style.color = 'white';
     } if (purplebtnOn == true) {
-      event.target.style.backgroundColor = 'purple';
+      event.target.style.backgroundColor = '#AB90B6';
+      event.target.style.color = 'white';
     }
   })
 
