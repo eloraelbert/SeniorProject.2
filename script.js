@@ -1,5 +1,48 @@
 
-
+//window.onload=function(){
+  var bluebtnOn = false;
+  var pinkbtnOn = false;
+  var purplebtnOn = false; 
+  const bbtn = document.getElementById('bluebtn');
+  bbtn.addEventListener('click', function onClick() {
+    if (bluebtnOn == false) {
+      bbtn.style.backgroundColor = 'blue';
+      bbtn.style.color = 'white';
+      bluebtnOn = true;
+    } else {
+       bbtn.style.backgroundColor = 'white';
+       bbtn.style.color = 'black';
+       bluebtnOn = false;
+    }
+    return bluebtnOn;
+  });
+  const pbtn = document.getElementById('pinkbtn');
+  pbtn.addEventListener('click', function onClick() {
+    if (pinkbtnOn == false) {
+      pbtn.style.backgroundColor = 'salmon';
+      pbtn.style.color = 'white';
+      pinkbtnOn = true;
+    } else {
+       pbtn.style.backgroundColor = 'white';
+       pbtn.style.color = 'black';
+       pinkbtnOn = false;
+    }
+    return pinkbtnOn;
+  });
+  const plbtn = document.getElementById('purplebtn');
+  plbtn.addEventListener('click', function onClick() {
+    if (purplebtnOn == false) {
+      plbtn.style.backgroundColor = 'purple';
+      plbtn.style.color = 'white';
+      purplebtnOn = true;
+    } else {
+       plbtn.style.backgroundColor = 'white';
+       plbtn.style.color = 'black';
+       purplebtnOn = false;
+    }
+    return purplebtnOn;
+  });
+//} 
 
 function createNewElement() {
   var divcount = document.getElementsByClassName('draggable').length;
@@ -13,68 +56,20 @@ function createNewElement() {
   txtNewInputBox.setAttribute('name', 'fname');
   txtNewInputBox.setAttribute('placeholder', 'Create Element');
   txtNewInputBox.setAttribute('ondblclick', 'deleteBox()');
-
-  var bluebtnOn = false;
-  var pinkbtnOn = false;
-  var purplebtnOn = false;  
+ 
   txtNewInputBox.addEventListener('click', event => {
     //handle click
-    if (bluebtnOn == true); {
+    if (bluebtnOn == true) {
       event.target.style.backgroundColor = 'blue';
-    }
-    if (pinkbtnOn == true); {
+    } if (pinkbtnOn == true) {
       event.target.style.backgroundColor = 'salmon';
-    }
-    if (purplebtnOn == true); {
+    } if (purplebtnOn == true) {
       event.target.style.backgroundColor = 'purple';
     }
   })
-  //txtNewInputBox.classList.add("draggable");
-  //set divCount to # of draggable divs
-
-  // Then add the content (a new input box) of the element.
-	// txtNewInputBox.innerHTML = "<input draggable = 'true' type='text' id='drag" + 
- //    divcount + "' ondragstart='drag(event)' type='text' id='fname' name='fname' value='Create Element' ondblclick='deleteBox()'>";
 
   // Finally put it where it is supposed to appear.
 	document.getElementById("inputBoard").appendChild(txtNewInputBox);
-}
-
-
-window.onload=function(){
-  const btn = document.getElementById('bluebtn');
-  btn.addEventListener('click', function onClick() {
-    btn.style.backgroundColor = 'blue';
-    btn.style.color = 'white';
-    bluebtnOn = true;
-    pinkbtnOn = false;
-    purplebtnOn = false;
-    return bluebtnOn, pinkbtnOn, purplebtnOn;
-  });
-}
-
-window.onload=function(){
-  const btn = document.getElementById('pinkbtn');
-  btn.addEventListener('click', function onClick() {
-    btn.style.backgroundColor = 'salmon';
-    btn.style.color = 'white';
-    bluebtnOn = false;
-    pinkbtnOn = true;
-    purplebtnOn = false;
-    return bluebtnOn, pinkbtnOn, purplebtnOn;
-  });
-}
-
-window.onload=function(){
-  const btn = document.getElementById('purplebtn');
-  btn.addEventListener('click', function onClick() {
-    btn.style.backgroundColor = 'purple';
-    btn.style.color = 'white';
-    bluebtnOn = false;
-    pinkbtnOn = false;
-    purplebtnOn = true;
-    return bluebtnOn, pinkbtnOn, purplebtnOn;
-  });
 }
 
 function allowDrop(ev) {
