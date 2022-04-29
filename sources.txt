@@ -1,0 +1,3 @@
+https://www.codegrepper.com/code-examples/javascript/change+color+onclick+javascript
+
+https://attacomsian.com/blog/javascript-dom-detect-if-an-element-has-focus#:~:text=To%20detect%20if%20the%20element,focused%20element%20in%20the%20document.
