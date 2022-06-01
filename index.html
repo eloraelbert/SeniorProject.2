@@ -5,10 +5,10 @@
   </head>
   <body>
     <title>Notsey</title>
+    <button><a href="help.html">help</a></button>
     <h2>Notsey</h2>
-    <p>Click text boxes to add your own text. Drag boxes into the space below and organize them however you like.</p>
+    <p>Welcome to Notsey! Time to get to work!</p>
     <div id="inputBoard">
-      <b><br>
         <button onclick="createNewElement()">New Box</button>
         <button id = "bluebtn">Blue!</button>
         <button id = "pinkbtn">Pink!</button>
@@ -16,9 +16,9 @@
 <!--         <input draggable = "true" id = "drag0" ondragstart="drag(event)" type="text" id="fname" name="fname" placeholder="Create Element" class = "draggable"> -->
     </div>
     <div class = "flex-container">
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Not Started</div>
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">In Progress</div>
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">Completed</div>
     </div>
     <script src="script.js"></script>
   </body>
